@@ -1,0 +1,13 @@
+version: 1
+app: ../govready-q-apps-django/django_website
+questions:
+  - id: infrastructure
+    app: ../govready-apps-dev/apps/cloud_dot_gov
+    questions: [ ]
+  - id: web_server
+    app: ../govready-apps-dev/apps/web_server_apache
+    questions:
+      - id: system_details
+        questions:
+          - id: hostname
+            answer: q.govready.com
