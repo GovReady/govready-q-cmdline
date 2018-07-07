@@ -9,7 +9,7 @@ The command is a driver for a command-line version of GovReady-Q. It takes the f
 * Starts apps and answers questions according to a YAML file given on the command line.
 * Writes out all generated output documents in HTML and Markdown formats to an output directory given on the command line.
 
-Note that the database records go into whatever database your GovReady-Q installation is configured to use (e.g. `local/db.sqlite`), and the records created by this tool are not deleted at the end.
+Note that the database records go into whatever database your GovReady-Q installation is configured to use (e.g. `local/db.sqlite`), and the records created by this tool are not deleted at the end. To avoid polluting your current GovReady-Q database, create a separate install of GovReady-Q.
 
 Installation and Usage
 ----------------------
@@ -17,6 +17,11 @@ Installation and Usage
 Clone this repository in a directory next to govready-q:
 
 	$ git clone https://github.com/GovReady/govready-q-cmdline
+
+Also clone the compliance app repositories containing the compliance apps referenced in the `demo.yaml` into directories next to govready-q:
+
+	git clone git@github.com:GovReady/govready-q-apps-django.git
+	git clone git@github.com:GovReady/govready-apps-dev.git
 
 Then go into the govready-q directoy and set up a symlink so Django can see the management command:
 
